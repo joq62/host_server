@@ -351,7 +351,7 @@ handle_info({timeout,check_repo_update}, State) ->
 		   {error,Reason}->
 		       ?LOG_WARNING("Failed during clone action ",[Reason])
 	       end;
-	{error,["Already updated ","application_specs"]}->
+	{error,["Already updated ","host_specs"]}->
 	    ok;
 	{error,Reason}->
 	    ?LOG_WARNING("Failed to update ",[Reason]);
